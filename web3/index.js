@@ -37,24 +37,45 @@ export default class Web3 {
         };
         return await this.call(rpcCall);
       };
-      return smartContract;
     }
+    return smartContract;
   }
-  async getBalance(address) {}
-  async transfer({ from, to, amount }) {}
+  async getBalance(address) {
+    const body = {
+      address: address || this.address,
+    };
+    const res = await fetch(`${this.provider.href}get-balance`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    const response = await res.json();
+    if (response.error) {
+      throw new Error(response.error);
+    }
+    return response.result;
+  }
+  async transfer({ from, to, amount }) {
+    const body = {
+      from: from || this.address,
+      to,
+      amount,
+    };
+    const res = await fetch(`${this.provider.href}transfer`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    const response = await res.json();
+    if (response.error) {
+      throw new Error(response.error);
+    }
+    return response.result;
+  }
 }
-
-const web3 = new Web3("http://localhost:3001");
-console.log(web3);
-
-web3.setClientAddress("Tom");
-console.log(web3.address);
-
-const res = await web3.call({
-  id: 0,
-  args: [],
-  method: "test",
-  address: web3.address,
-});
-
-console.log(res);

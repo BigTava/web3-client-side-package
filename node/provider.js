@@ -23,7 +23,6 @@ app.post("/call-smart-contract", async (req, res) => {
   const { id, method, args, address } = req.body;
 
   if (![id, method, address].filter(Boolean).length === 3) {
-    console.log(id);
     res.status(400).json({
       error: `Missing required fields: id: ${id}, method: ${method}, address: ${address}`,
     });

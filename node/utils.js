@@ -57,6 +57,7 @@ export async function callSmartContract(id, functionHandle, functionArgs) {
     throw new Error(`Smart contract with id '${id}' not found`);
   } else {
     const smartContract = (await import(contract.pathToPkg)).default;
+
     const res = smartContract[functionHandle](contract.state, ...functionArgs);
     if (functionHandle.startsWith("set")) {
       contract.state = res;
