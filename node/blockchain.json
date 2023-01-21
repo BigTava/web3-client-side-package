@@ -1,0 +1,107 @@
+[
+  {
+    "hash": 0,
+    "previousHash": null,
+    "smartContracts": [],
+    "accounts": [
+      {
+        "address": "program_account",
+        "balance": 1000000000
+      },
+      {
+        "address": "shaun",
+        "balance": 1000
+      },
+      {
+        "address": "tom",
+        "balance": 1000
+      }
+    ]
+  },
+  {
+    "hash": "0087a7dfb0201d9ccc8b61e06a9fa65c71f82f069f97eb298613cc93bddf5b4e",
+    "previousHash": 0,
+    "nonce": 126,
+    "smartContracts": [
+      {
+        "pathToPkg": "../node/pkg/build_a_smart_contract_in_rust.js",
+        "state": {
+          "base_account": {
+            "total_clicks": 0,
+            "clickers": []
+          }
+        },
+        "id": 0
+      }
+    ],
+    "accounts": []
+  },
+  {
+    "hash": "00b756596e5cb33201581076ee126a21801dcb3f574711a410fba694fa508c48",
+    "previousHash": "0087a7dfb0201d9ccc8b61e06a9fa65c71f82f069f97eb298613cc93bddf5b4e",
+    "nonce": 559,
+    "smartContracts": [
+      {
+        "pathToPkg": "../node/pkg/build_a_smart_contract_in_rust.js",
+        "state": {
+          "base_account": {
+            "total_clicks": 1,
+            "clickers": [
+              "test"
+            ]
+          }
+        },
+        "id": 0
+      }
+    ],
+    "accounts": []
+  },
+  {
+    "hash": "00bf091b9b5641c3cd4f483ea5126533632f25040b6fd20cac40c835546869f2",
+    "previousHash": "00b756596e5cb33201581076ee126a21801dcb3f574711a410fba694fa508c48",
+    "nonce": 36,
+    "smartContracts": [],
+    "accounts": [
+      {
+        "address": "shaun",
+        "balance": 999
+      },
+      {
+        "address": "tom",
+        "balance": 1001
+      }
+    ]
+  },
+  {
+    "hash": "00dfd15704df39e83da951d17649551564b08917471e2f8a5b24c958b65a2dda",
+    "previousHash": "00bf091b9b5641c3cd4f483ea5126533632f25040b6fd20cac40c835546869f2",
+    "nonce": 227,
+    "smartContracts": [],
+    "accounts": [
+      {
+        "address": "shaun",
+        "balance": 998
+      },
+      {
+        "address": "tom",
+        "balance": 1002
+      }
+    ]
+  },
+  {
+    "hash": "000d29f162cb7e3a09d864857ba7ef36e3b3de1429550e8643eba718a3e62753",
+    "previousHash": "00dfd15704df39e83da951d17649551564b08917471e2f8a5b24c958b65a2dda",
+    "nonce": 198,
+    "smartContracts": [],
+    "accounts": [
+      {
+        "address": "shaun",
+        "balance": 898
+      },
+      {
+        "address": "tom",
+        "balance": 1102
+      }
+    ]
+  }
+]
