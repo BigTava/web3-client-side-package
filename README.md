@@ -1,5 +1,20 @@
 # Web3 - Build a Web3 Client-Side Package for Your dApp
 
+## How to use
+
+#### In 1 terminal run 
+```
+node node/provider.js
+```
+
+#### In a second terminal run
+```
+node tests/index.js
+```
+
+#### Test again
+The blockchain .json must be reseted to the initial state
+
 ## 1
 
 ### --description--
